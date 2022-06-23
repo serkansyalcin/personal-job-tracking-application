@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    jobList: []
+    jobListArray: []
 }
 
 const jobList = createSlice({
@@ -11,7 +11,7 @@ const jobList = createSlice({
         addJob: (state, action) => {
             const {id, jobName, priority} = action.payload
             
-            state.jobList.push({ id, jobName, priority })
+            state.jobListArray.push({ id, jobName, priority })
         }
     }
 })

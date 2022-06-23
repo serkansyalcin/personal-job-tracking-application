@@ -3,7 +3,7 @@ import jobListReducer from '../features/job-list/jobList.slice'
 
 const store = configureStore({
     reducer: {
-        jobList: jobListReducer
+        jobs: jobListReducer
     }
 })
 

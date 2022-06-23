@@ -10,19 +10,18 @@ const options = [
         label: 'Choose'
     },
     {
-        value: 'urgent',
+        value: 'Urgent',
         label: 'Urgent'
     },
     {
-        value: 'regular',
+        value: 'Regular',
         label: 'Regular'
     },
     {
-        value: 'trivial',
+        value: 'Trivial',
         label: 'Trivial'
     }
 ]
-
 
 const defaultFormFields = {
     jobName: "",
