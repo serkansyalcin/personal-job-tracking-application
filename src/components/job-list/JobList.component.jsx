@@ -1,5 +1,6 @@
 import SearchIcon from '../../assets/magnifying-glass-solid.svg'
 import JobListItems from '../job-list-items/JobListItems.component'
+import { useState } from 'react'
 
 const options = [
     {
@@ -21,7 +22,12 @@ const options = [
 ]
 
 const JobList = () => {
+    const [ searchField, setSearchField ] = useState({
+        jobName: '',
+        priority: ''
+    })
 
+    const handleSearchFields = (e, type) => setSearchField({ ...searchField, [type]: e.target.value })
 
     return (
         <div>
@@ -31,11 +37,15 @@ const JobList = () => {
                     type='text' 
                     className='relative pl-8 h-10 rounded w-2/3 border' 
                     placeholder='Job Name' 
+                    value={searchField.jobName}
+                    onChange={e => handleSearchFields(e, 'jobName')}
                 />
                 <img alt='search icon' src={SearchIcon} className='absolute w-4 top-5 left-4'  />
                 <select 
                     id="job-priority" 
                     className='h-10 w-1/3 rounded bg-white border pl-2'
+                    value={searchField.priority}
+                    onChange={e => handleSearchFields(e, 'priority')}
                 >
                 {
                     options.map(option => (
@@ -44,7 +54,7 @@ const JobList = () => {
                 }    
                 </select>
             </div>
-            <JobListItems />
+            <JobListItems searchField={searchField} />
         </div>
     )
 }
