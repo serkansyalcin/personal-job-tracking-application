@@ -9,7 +9,9 @@ const jobList = createSlice({
     initialState,
     reducers:{
         addJob: (state, action) => {
+            const {id, jobName, priority} = action.payload
             
+            state.jobList.push({ id, jobName, priority })
         }
     }
 })
@@ -17,3 +19,4 @@ const jobList = createSlice({
 
 export default jobList.reducer
 
+export const { addJob } = jobList.actions
