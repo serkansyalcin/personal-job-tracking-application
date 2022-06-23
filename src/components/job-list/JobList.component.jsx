@@ -32,10 +32,10 @@ const JobList = () => {
     return (
         <div>
             <h3 className="text-2xl mb-4">Job List</h3>
-            <div className="bg-gray-100 p-2 relative rounded-tr rounded-tl flex gap-4">
+            <div className="bg-gray-100 p-2 relative rounded-tr rounded-tl flex-col md:flex-row flex gap-4">
                 <input 
                     type='text' 
-                    className='relative pl-8 h-10 rounded w-2/3 border' 
+                    className='relative pl-8 h-10 rounded w-full md:w-2/3 border' 
                     placeholder='Job Name' 
                     value={searchField.jobName}
                     onChange={e => handleSearchFields(e, 'jobName')}
@@ -43,7 +43,7 @@ const JobList = () => {
                 <img alt='search icon' src={SearchIcon} className='absolute w-4 top-5 left-4'  />
                 <select 
                     id="job-priority" 
-                    className='h-10 w-1/3 rounded bg-white border pl-2'
+                    className='h-10 w-full md:w-1/3 rounded bg-white border pl-2'
                     value={searchField.priority}
                     onChange={e => handleSearchFields(e, 'priority')}
                 >

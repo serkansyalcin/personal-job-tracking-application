@@ -52,10 +52,10 @@ const CreateJob = () => {
         <div className='mb-8'>
             <h3 className='text-2xl mb-4'>Create New Job</h3>
             <form 
-                className='flex justify-between items-end' 
+                className='grid sm:grid-cols-4 md:grid-cols-5 grid-cols-1 gap-8 justify-between items-end' 
                 onSubmit={(e) => handleSubmit(e)}
             >
-                <div className='w-3/5'>
+                <div className='col-span-3 md:grid-cols-2'>
                     <label htmlFor='job-name' className='block text-sm text-gray-700'>
                         Job Name
                     </label>
@@ -67,7 +67,7 @@ const CreateJob = () => {
                         value={formField.jobName}
                     />
                 </div>  
-                <div className='w-1/4'>
+                <div className='col-span-1'>
                     <label htmlFor='job-priority' className='block text-sm text-gray-700'>
                         Job Priority
                     </label>

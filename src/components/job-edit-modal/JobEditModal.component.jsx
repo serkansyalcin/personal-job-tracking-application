@@ -5,6 +5,10 @@ import { toggleEditModal } from "../../features/modal/modal.slice"
 
 const options = [
     {
+        value: null,
+        label: 'Choose'
+    },
+    {
         value: 'Urgent',
         label: 'Urgent'
     },
@@ -46,7 +50,7 @@ const JobEditModal = ({ eachJob }) => {
     return (
         jobEditModal &&
         <div className='modal bg-black bg-opacity-50'>
-            <div className="modal flex flex-col justify-center items-center rounded-lg w-2/5 h-80 bg-white">
+            <div className="modal flex flex-col justify-center items-center rounded-lg w-4/5 md:w-2/5 h-80 bg-white">
                 <h2 className="text-3xl mb-4 font-semibold">Job Edit</h2>
                 
                 <div className="w-full px-8 mb-2">
@@ -81,7 +85,7 @@ const JobEditModal = ({ eachJob }) => {
                     </select>
                 </div>
                 
-                <div className='flex gap-8'>
+                <div className='flex gap-12'>
                     <button
                         className='px-8 py-3 text-gray-600 bg-gray-200 hover:bg-gray-300 rounded'
                         onClick={handleCancelButton}

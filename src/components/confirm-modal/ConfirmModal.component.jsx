@@ -26,14 +26,14 @@ const ConfirmModal = (props) => {
         <div 
             className='modal bg-black bg-opacity-50'    
         >
-            <div className='flex flex-col justify-center items-center gap-6 rounded-lg modal w-2/5 h-60 bg-white'>
+            <div className='flex flex-col justify-center items-center gap-6 rounded-lg modal w-4/5 md:w-2/5 h-60 bg-white'>
                 <img 
                     src={CircleExclamationIcon} 
                     alt='circle exclamation icon' 
                     className='w-12' 
                 />
-                <h4 className='text-3xl font-semibold'>Are you sure you want to delete it?</h4>
-                <div className='flex gap-8'>
+                <h4 className='text-2xl text-center md:text-3xl font-semibold'>Are you sure you want to delete it?</h4>
+                <div className='flex gap-12'>
                     <button
                         className='px-8 py-3 text-gray-600 bg-gray-200 hover:bg-gray-300 rounded'
                         onClick={handleCancelButton}

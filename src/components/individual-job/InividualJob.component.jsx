@@ -35,27 +35,27 @@ const IndividualJob = ({ eachJob }) => {
 
     return (
         <div 
-            className='grid grid-cols-4 text-gray-900 hover:bg-gray-100 bg-opacity-75 
+            className='grid grid-cols-3 md:grid-cols-4 text-gray-900 hover:bg-gray-100 bg-opacity-75 
             px-2 h-16  shadow-sm justify-center items-center' 
         >
-            <div className='col-span-2'>{ jobName }</div>
+            <div className='col-span-1 md:col-span-2'>{ jobName }</div>
             <div 
                 className={` ${priorityDynamicBackground} px-4 py-1 
                 rounded-lg text-white text-center w-24`}
             >
                 { priority }
             </div>
-            <div className='flex gap-6 items-center col-span-1'>
+            <div className='flex gap-4 md:gap-6 items-center col-span-1'>
                 <img 
                     src={Penlogo} 
                     alt='pen logo' 
-                    className='p-2 h-10 w-10 bg-gray-200 cursor-pointer rounded-lg'
+                    className='p-2 h-8 w-8 md:h-10 md:w-10 bg-gray-200 cursor-pointer rounded-lg'
                     onClick={handleJobEditModal}
                 />
                 <img 
                     src={TrashCanLogo} 
                     alt='trash can logo'
-                    className='p-2 h-10 w-10 bg-gray-200 cursor-pointer rounded-lg'
+                    className='p-2 h-8 w-8 md:h-10 md:w-10 bg-gray-200 cursor-pointer rounded-lg'
                     onClick={handleConfirmModal}
                 />
             </div>

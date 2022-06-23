@@ -14,10 +14,11 @@ const JobListItems = ({ searchField }) => {
 
     return (
         <div className='shadow rounded-br rounded-bl'>
-            <div className="flex text-gray-800 bg-gray-200 py-1 px-2 font-semibold ">
-                <span className="w-2/4">Name</span>
-                <span className="w-1/4">Priority</span>
-                <span className="w-1/4">Action</span>
+            <div className="grid grid-cols-3 md:grid-cols-4 text-gray-800 
+            bg-gray-200 py-1 px-2 font-semibold">
+                <span className="cols-span-1 md:col-span-2">Name</span>
+                <span className="col-span-1">Priority</span>
+                <span className="col-span-1">Action</span>
             </div>
             {
                 jobListArray && (
