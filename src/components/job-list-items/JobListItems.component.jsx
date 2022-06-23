@@ -20,10 +20,9 @@ const JobListItems = ({ searchField }) => {
                 <span className="w-1/4">Action</span>
             </div>
             {
-    
                 jobListArray && (
                     filteredJobList.map(eachJob => (
-                        <IndividualJob eachJob={eachJob}  key={eachJob.id}/>
+                        <IndividualJob eachJob={eachJob} key={eachJob.id}/>
                     ))
                 )
             }

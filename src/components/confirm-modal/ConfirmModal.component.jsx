@@ -1,7 +1,7 @@
 import CircleExclamationIcon from '../../assets/circle-exclamation-solid.svg'
 import '../../index.css'
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { deleteJob } from '../../features/job-list/jobList.slice'
 
 import { toggleConfirmModal } from '../../features/modal/modal.slice'

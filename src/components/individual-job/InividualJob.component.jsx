@@ -1,15 +1,22 @@
 import Penlogo from '../../assets/pen-solid.svg'
 import TrashCanLogo from '../../assets/trash-can-solid.svg'
+
 import { useDispatch } from 'react-redux'
-import { toggleConfirmModal } from '../../features/modal/modal.slice'
+import { toggleConfirmModal, toggleEditModal } from '../../features/modal/modal.slice'
+
 import ConfirmModal from '../confirm-modal/ConfirmModal.component'
+import JobEditModal from '../job-edit-modal/JobEditModal.component'
 
 const IndividualJob = ({ eachJob }) => {
     const { id, jobName, priority } = eachJob
     const dispatch = useDispatch()
 
-    const handleClick = () => {
+    const handleConfirmModal = () => {
         dispatch(toggleConfirmModal())
+    }
+
+    const handleJobEditModal = () => {
+        dispatch(toggleEditModal())
     }
 
     let priorityDynamicBackground = 'bg-black'
@@ -43,15 +50,17 @@ const IndividualJob = ({ eachJob }) => {
                     src={Penlogo} 
                     alt='pen logo' 
                     className='p-2 h-10 w-10 bg-gray-200 cursor-pointer rounded-lg'
+                    onClick={handleJobEditModal}
                 />
                 <img 
                     src={TrashCanLogo} 
                     alt='trash can logo'
                     className='p-2 h-10 w-10 bg-gray-200 cursor-pointer rounded-lg'
-                    onClick={handleClick}
+                    onClick={handleConfirmModal}
                 />
             </div>
             <ConfirmModal id={id} />
+            <JobEditModal eachJob={eachJob} />
         </div>
     )
 }

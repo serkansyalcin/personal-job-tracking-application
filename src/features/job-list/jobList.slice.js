@@ -16,6 +16,13 @@ const jobList = createSlice({
         deleteJob: (state, action) => {
             const { id } = action.payload
             state.jobListArray = state.jobListArray.filter(eachJob => eachJob.id !== id)
+        },
+        editJobPriority: (state, action) => {
+            const { id, selectedPriority } = action.payload
+            const matchingJob = state.jobListArray.find(job => job.id === id)
+            
+            matchingJob.priority = selectedPriority
+            console.log('1')
         }
     }
 })
@@ -23,4 +30,4 @@ const jobList = createSlice({
 
 export default jobList.reducer
 
-export const { addJob, deleteJob } = jobList.actions
+export const { addJob, deleteJob, editJobPriority } = jobList.actions
