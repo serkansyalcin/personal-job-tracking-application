@@ -12,6 +12,10 @@ const jobList = createSlice({
             const {id, jobName, priority} = action.payload
             
             state.jobListArray.push({ id, jobName, priority })
+        },
+        deleteJob: (state, action) => {
+            const { id } = action.payload
+            state.jobListArray = state.jobListArray.filter(eachJob => eachJob.id !== id)
         }
     }
 })
@@ -19,4 +23,4 @@ const jobList = createSlice({
 
 export default jobList.reducer
 
-export const { addJob } = jobList.actions
+export const { addJob, deleteJob } = jobList.actions

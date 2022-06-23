@@ -14,7 +14,7 @@ const JobListItems = () => {
             {
                 jobListArray && (
                     jobListArray.map(eachJob => (
-                        <IndividualJob eachJob={eachJob} />
+                        <IndividualJob eachJob={eachJob}  key={eachJob.id}/>
                     ))
                 )
             }

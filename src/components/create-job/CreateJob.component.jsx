@@ -49,7 +49,7 @@ const CreateJob = () => {
     }
 
     return(
-        <div className='mb-4'>
+        <div className='mb-8'>
             <h3 className='text-2xl mb-4'>Create New Job</h3>
             <form 
                 className='flex justify-between items-end' 
@@ -62,7 +62,7 @@ const CreateJob = () => {
                     <input 
                         type='text' 
                         id='job-name' 
-                        className='block h-10 w-full border rounded pr-2'
+                        className='block h-10 w-full border rounded pl-2'
                         onChange={(e) => handleInputs(e, 'jobName')}
                         value={formField.jobName}
                     />
