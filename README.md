@@ -1,3 +1,8 @@
+# Kişisel İş Takip Uygulaması (React App)
+![image](https://user-images.githubusercontent.com/26199757/175512004-41cf01a0-685e-4e6d-be4f-5c69d06a1789.png)
+![image](https://user-images.githubusercontent.com/26199757/175512043-b38c6220-cc2e-46c3-993e-bdf7b887ee92.png)
+![image](https://user-images.githubusercontent.com/26199757/175512105-f7ed3b75-ec2a-4d00-a3ad-9d2fb98ba4d8.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
