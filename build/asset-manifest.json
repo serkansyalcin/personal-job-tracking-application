@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/personal-job-tracking-application/static/css/main.a497f36e.css",
+    "main.js": "/personal-job-tracking-application/static/js/main.db6fd268.js",
+    "static/js/787.e42e3ac2.chunk.js": "/personal-job-tracking-application/static/js/787.e42e3ac2.chunk.js",
+    "static/media/trash-can-solid.svg": "/personal-job-tracking-application/static/media/trash-can-solid.11722c82e25b5f3bf2930217dee83a63.svg",
+    "index.html": "/personal-job-tracking-application/index.html",
+    "static/media/magnifying-glass-solid.svg": "/personal-job-tracking-application/static/media/magnifying-glass-solid.859f033d55cc408ae9018d058d83e5ef.svg",
+    "static/media/pen-solid.svg": "/personal-job-tracking-application/static/media/pen-solid.69a08cd6a187172b9ee0ba0a5648c48c.svg",
+    "static/media/circle-exclamation-solid.svg": "/personal-job-tracking-application/static/media/circle-exclamation-solid.98f35a66595182afee2272e4191fb6e1.svg",
+    "static/media/plus-solid.svg": "/personal-job-tracking-application/static/media/plus-solid.f3bf1c544c82d2c15e4dc763981969dd.svg",
+    "main.a497f36e.css.map": "/personal-job-tracking-application/static/css/main.a497f36e.css.map",
+    "main.db6fd268.js.map": "/personal-job-tracking-application/static/js/main.db6fd268.js.map",
+    "787.e42e3ac2.chunk.js.map": "/personal-job-tracking-application/static/js/787.e42e3ac2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a497f36e.css",
+    "static/js/main.db6fd268.js"
+  ]
+}

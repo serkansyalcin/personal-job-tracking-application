@@ -1,7 +1,7 @@
 import PlusIcon from '../../assets/plus-solid.svg'
 import { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addJob, updateCartListFromLocalStorage } from '../../features/job-list/jobList.slice'
 
 const options = [
@@ -32,11 +32,12 @@ const defaultFormFields = {
 const CreateJob = () => {
     const [formField, setFormField] = useState(defaultFormFields)
     const dispatch = useDispatch()
-    const jobList = useSelector(state => state.jobs.jobListArray)
     const jobListFromLocalStorage = JSON.parse(localStorage.getItem('jobs'))
 
     useEffect(()=>{
-        dispatch(updateCartListFromLocalStorage(jobListFromLocalStorage))
+        if(jobListFromLocalStorage){
+            dispatch(updateCartListFromLocalStorage(jobListFromLocalStorage))
+        }
     },[])
 
     const handleInputs = (e, type) => {

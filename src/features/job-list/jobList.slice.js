@@ -19,6 +19,7 @@ const jobList = createSlice({
             state.jobListArray = state.jobListArray.filter(eachJob => eachJob.id !== id)
             
             let jobsLocalStorage = JSON.parse(localStorage.getItem('jobs'))
+            
             jobsLocalStorage = jobsLocalStorage.filter(job => job.id !== id)
             localStorage.setItem('jobs', JSON.stringify(jobsLocalStorage))
         },
@@ -30,6 +31,7 @@ const jobList = createSlice({
 
             let jobsLocalStorage = JSON.parse(localStorage.getItem('jobs'))
             const matchingJobFromLocalStorage = jobsLocalStorage.find(job => job.id === id)
+
             matchingJobFromLocalStorage.priority = selectedPriority
             localStorage.setItem('jobs', JSON.stringify(jobsLocalStorage))
         },
