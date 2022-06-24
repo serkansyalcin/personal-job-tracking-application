@@ -12,7 +12,7 @@ const Footer = () => {
                     repository
                 </a>
             </div>
-            <div className="text-gray-800">&copy; {year.getFullYear()} Serkan Yalcin</div>
+            <div className="text-gray-800">&copy; {year.getFullYear()} Serkan Yalçın</div>
         </footer>
     )
 }
