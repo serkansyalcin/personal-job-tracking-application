@@ -12,17 +12,29 @@ const jobList = createSlice({
             const {id, jobName, priority} = action.payload
             
             state.jobListArray.push({ id, jobName, priority })
+            localStorage.setItem('jobs', JSON.stringify(state.jobListArray))
         },
         deleteJob: (state, action) => {
             const { id } = action.payload
             state.jobListArray = state.jobListArray.filter(eachJob => eachJob.id !== id)
+            
+            let jobsLocalStorage = JSON.parse(localStorage.getItem('jobs'))
+            jobsLocalStorage = jobsLocalStorage.filter(job => job.id !== id)
+            localStorage.setItem('jobs', JSON.stringify(jobsLocalStorage))
         },
         editJobPriority: (state, action) => {
             const { id, selectedPriority } = action.payload
             const matchingJob = state.jobListArray.find(job => job.id === id)
             
             matchingJob.priority = selectedPriority
-            console.log('1')
+
+            let jobsLocalStorage = JSON.parse(localStorage.getItem('jobs'))
+            const matchingJobFromLocalStorage = jobsLocalStorage.find(job => job.id === id)
+            matchingJobFromLocalStorage.priority = selectedPriority
+            localStorage.setItem('jobs', JSON.stringify(jobsLocalStorage))
+        },
+        updateCartListFromLocalStorage: (state, action) => {
+            state.jobListArray = action.payload
         }
     }
 })
@@ -30,4 +42,4 @@ const jobList = createSlice({
 
 export default jobList.reducer
 
-export const { addJob, deleteJob, editJobPriority } = jobList.actions
+export const { addJob, deleteJob, editJobPriority, updateCartListFromLocalStorage } = jobList.actions

@@ -4,6 +4,6 @@
 
 @layer components{
     .modal{
-        @apply absolute bottom-0 top-0 right-0 left-0 m-auto
+        @apply fixed bottom-0 top-0 right-0 left-0 m-auto
     }
 }
